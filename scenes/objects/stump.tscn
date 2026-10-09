@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://covvxuslssmj7"]
+
+[ext_resource type="Texture2D" uid="uid://dyxbmdangl8xx" path="res://graphics/plants/stump.png" id="1_wi2ep"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_drsw1"]
+radius = 3.1622777
+
+[node name="Stump" type="StaticBody2D" unique_id=1585666135]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1855360674]
+position = Vector2(0, 2)
+texture = ExtResource("1_wi2ep")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1935668103]
+position = Vector2(0, 3)
+shape = SubResource("CircleShape2D_drsw1")

@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ca04kp5ir35vk"]
+
+[ext_resource type="Texture2D" uid="uid://bldxvi5dvro6k" path="res://graphics/icons/apple.png" id="1_5uadj"]
+[ext_resource type="Script" uid="uid://d0dgrqw8c836b" path="res://scenes/ui/panel_container.gd" id="1_rxn4h"]
+
+[node name="TestUI" type="Control" unique_id=465053911]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GridContainer" type="GridContainer" parent="." unique_id=101095130]
+layout_mode = 0
+offset_right = 109.0
+offset_bottom = 92.0
+columns = 5
+
+[node name="PanelContainer" type="PanelContainer" parent="GridContainer" unique_id=779244287]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+script = ExtResource("1_rxn4h")
+
+[node name="TextureRect" type="TextureRect" parent="GridContainer/PanelContainer" unique_id=554791935]
+layout_mode = 2
+texture = ExtResource("1_5uadj")
+
+[node name="Button" type="Button" parent="GridContainer/PanelContainer" unique_id=1163304723]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="GridContainer" unique_id=1604562469]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="PanelContainer3" type="PanelContainer" parent="GridContainer" unique_id=1311471671]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2
+
+[node name="PanelContainer4" type="PanelContainer" parent="GridContainer" unique_id=395840523]
+custom_minimum_size = Vector2(20, 20)
+layout_mode = 2

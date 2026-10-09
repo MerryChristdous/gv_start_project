@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://6rab6hptpf7i"]
+
+[ext_resource type="Script" uid="uid://cmnq1lw2fvvss" path="res://scenes/components/hit_component.gd" id="1_t7wh5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t7wh5"]
+radius = 3.0
+
+[node name="HitComponent" type="Area2D" unique_id=657776010]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_t7wh5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1711986951]
+shape = SubResource("CircleShape2D_t7wh5")
+debug_color = Color(0.823923, 0.39787853, 0.09874909, 0.41960785)

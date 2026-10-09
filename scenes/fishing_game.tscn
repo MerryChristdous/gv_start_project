@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://bi631xhe68in3"]
+
+[ext_resource type="Texture2D" uid="uid://bcs34147dv0mx" path="res://graphics/machines/projectile.png" id="1_2yxpx"]
+[ext_resource type="Script" uid="uid://cbejvk5ejwaus" path="res://scenes/fishing_game.gd" id="1_vhdqh"]
+[ext_resource type="Texture2D" uid="uid://cufccts2vhufa" path="res://graphics/icons/goldfish.png" id="2_wogwn"]
+
+[node name="FishingGame" type="Node2D" unique_id=920328930]
+script = ExtResource("1_vhdqh")
+
+[node name="Control" type="Control" parent="." unique_id=1289860464]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="FishBiteTip" type="TextureRect" parent="Control" unique_id=989128749]
+visible = false
+custom_maximum_size = Vector2(16, 16)
+layout_mode = 0
+offset_right = 42.0
+offset_bottom = 40.0
+texture = ExtResource("1_2yxpx")
+
+[node name="FishTexture" type="TextureRect" parent="Control" unique_id=2048161957]
+visible = false
+layout_mode = 0
+offset_right = 22.0
+offset_bottom = 16.0
+texture = ExtResource("2_wogwn")
+
+[node name="BiteTimer" type="Timer" parent="." unique_id=1598156935]
+one_shot = true
+
+[node name="EscapeTimer" type="Timer" parent="." unique_id=928238580]
+wait_time = 1.5
+one_shot = true
+
+[connection signal="timeout" from="BiteTimer" to="." method="_on_bite_timer_timeout"]
+[connection signal="timeout" from="EscapeTimer" to="." method="_on_escape_timer_timeout"]

@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://bn8qnit5i4w5x"]
+
+[ext_resource type="Script" uid="uid://bvfxyp3fa7iih" path="res://scenes/components/hurt_component.gd" id="1_d1uqi"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_7yu6v"]
+
+[node name="HurtComponent" type="Area2D" unique_id=97280034]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource("1_d1uqi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=550903998]
+shape = SubResource("CapsuleShape2D_7yu6v")
+debug_color = Color(0.76040953, 0.44594932, 0.21516192, 0.41960785)
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
